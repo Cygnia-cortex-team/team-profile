@@ -1,0 +1,300 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Modern Team Section</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        body {
+            background: linear-gradient(135deg, #f5f7fa 0%, #e4edf5 100%);
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding: 40px 20px;
+        }
+
+        .header {
+            text-align: center;
+            margin-bottom: 50px;
+            max-width: 800px;
+        }
+
+        .header h1 {
+            font-size: 3.5rem;
+            background: linear-gradient(45deg, #2c3e50, #3498db);
+            -webkit-background-clip: text;
+            background-clip: text;
+            color: transparent;
+            margin-bottom: 15px;
+            letter-spacing: -1px;
+        }
+
+        .header p {
+            font-size: 1.2rem;
+            color: #555;
+            line-height: 1.6;
+        }
+
+        .divider {
+            height: 4px;
+            width: 80px;
+            background: linear-gradient(to right, #3498db, #2c3e50);
+            margin: 20px auto;
+            border-radius: 10px;
+        }
+
+        .row {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 30px;
+            max-width: 1200px;
+        }
+
+        .column {
+            flex: 0 0 calc(33.333% - 30px);
+            display: flex;
+            margin-bottom: 30px;
+        }
+
+        .card {
+            background: white;
+            border-radius: 15px;
+            overflow: hidden;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            display: flex;
+            flex-direction: column;
+            width: 100%;
+        }
+
+        .card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 35px rgba(0, 0, 0, 0.15);
+        }
+
+        .image-container {
+            height: 280px;
+            overflow: hidden;
+            position: relative;
+        }
+
+        .image-container img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.5s ease;
+        }
+
+        .card:hover .image-container img {
+            transform: scale(1.05);
+        }
+
+        .overlay {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            background: linear-gradient(to top, rgba(0,0,0,0.7), transparent);
+            height: 50%;
+            display: flex;
+            align-items: flex-end;
+            padding: 20px;
+        }
+
+        .social-icons {
+            display: flex;
+            gap: 15px;
+        }
+
+        .social-icons a {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 36px;
+            height: 36px;
+            border-radius: 50%;
+            background: rgba(255, 255, 255, 0.2);
+            color: white;
+            transition: all 0.3s ease;
+        }
+
+        .social-icons a:hover {
+            background: #3498db;
+            transform: translateY(-3px);
+        }
+
+        .container {
+            padding: 25px;
+            text-align: center;
+            flex-grow: 1;
+            display: flex;
+            flex-direction: column;
+        }
+
+        h2 {
+            color: #2c3e50;
+            margin-bottom: 8px;
+            font-size: 1.8rem;
+        }
+
+        .title {
+            color: #3498db;
+            font-weight: 600;
+            margin-bottom: 15px;
+            font-size: 1.1rem;
+            letter-spacing: 0.5px;
+        }
+
+        .description {
+            color: #555;
+            line-height: 1.6;
+            margin-bottom: 20px;
+            flex-grow: 1;
+        }
+
+        .email {
+            color: #7f8c8d;
+            margin-bottom: 20px;
+            font-weight: 500;
+        }
+
+        .button {
+            display: inline-block;
+            padding: 12px 30px;
+            background: linear-gradient(45deg, #3498db, #2c3e50);
+            color: white;
+            border-radius: 50px;
+            text-decoration: none;
+            font-weight: 600;
+            transition: all 0.3s ease;
+            border: none;
+            cursor: pointer;
+            font-size: 1rem;
+            box-shadow: 0 4px 15px rgba(52, 152, 219, 0.3);
+        }
+
+        .button:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 7px 20px rgba(52, 152, 219, 0.4);
+            background: linear-gradient(45deg, #2c3e50, #3498db);
+        }
+
+        .button i {
+            margin-right: 8px;
+        }
+
+        @media screen and (max-width: 1000px) {
+            .column {
+                flex: 0 0 calc(50% - 30px);
+            }
+        }
+
+        @media screen and (max-width: 650px) {
+            .column {
+                flex: 0 0 100%;
+                max-width: 400px;
+            }
+            
+            .header h1 {
+                font-size: 2.5rem;
+            }
+        }
+
+        .footer {
+            margin-top: 50px;
+            text-align: center;
+            color: #7f8c8d;
+            font-size: 0.9rem;
+        }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <h1>Meet Our Creative Team</h1>
+        <div class="divider"></div>
+        <p>We're a passionate group of designers, developers, and innovators committed to creating exceptional digital experiences. Get to know the talented individuals who make it all happen.</p>
+    </div>
+
+    <div class="row">
+        <div class="column">
+            <div class="card">
+                <div class="image-container">
+                    <img src="https://raw.githubusercontent.com/cylabs-osint/challenges/main/bohemian-man-with-his-arms-crossed.jpg" alt="Jane">
+                    <div class="overlay">
+                        <div class="social-icons">
+                            <a href="#"><i class="fab fa-twitter"></i></a>
+                            <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                            <a href="#"><i class="fab fa-instagram"></i></a>
+                        </div>
+                    </div>
+                </div>
+                <div class="container">
+                    <h2>Jane Doe</h2>
+                    <p class="title">CEO & Founder</p>
+                    <p class="description">Jane leads our company with vision and passion. With 15+ years in tech innovation, she's committed to building solutions that transform industries.</p>
+                    <p class="email">jane.doe@psycyberlabs.com</p>
+                    <a href="#" class="button"><i class="fas fa-envelope"></i> Contact</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="column">
+            <div class="card">
+                <div class="image-container">
+                    <img src="https://raw.githubusercontent.com/cylabs-osint/challenges/main/portrait-confident-serious-young-man.jpg" alt="Mike">
+                    <div class="overlay">
+                        <div class="social-icons">
+                            <a href="#"><i class="fab fa-twitter"></i></a>
+                            <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                            <a href="#"><i class="fab fa-dribbble"></i></a>
+                        </div>
+                    </div>
+                </div>
+                <div class="container">
+                    <h2>Mike Ross</h2>
+                    <p class="title">Art Director</p>
+                    <p class="description">Mike transforms ideas into visual masterpieces. His award-winning designs have been featured in international publications and exhibitions.</p>
+                    <p class="email">mike.ross@psycyberlabs.com</p>
+                    <a href="#" class="button"><i class="fas fa-envelope"></i> Contact</a>
+                </div>
+            </div>
+        </div>
+        
+        <div class="column">
+            <div class="card">
+                <div class="image-container">
+                    <img src="https://raw.githubusercontent.com/cylabs-osint/challenges/refs/heads/main/Screenshot%202025-07-07%20155637.png" alt="john">
+                    <div class="overlay">
+                        <div class="social-icons">
+                            <a href="https://x.com/Johnmathew91993"><i class="fab fa-twitter"></i></a>
+                            <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                            <a href="#"><i class="fab fa-behance"></i></a>
+                        </div>
+                    </div>
+                </div>
+                <div class="container">
+                    <h2>John mathew</h2>
+                    <p class="title">Intern security researcher</p>
+                    <p class="description">specializes in vulnerability research, reverse engineering, and malware analysis.he contributes to cutting-edge discoveries in both offensive and defensive cybersecurity.</p>
+                    <p class="email">mathew@psycyberlabs.com</p>
+                    <a href="#" class="button"><i class="fas fa-envelope"></i> Contact</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="footer">
+        <p>© 2023 Creative Team. All rights reserved.</p>
+    </div>
+</body>
+</html>
