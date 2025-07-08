@@ -1,2 +1,2 @@
-Sample Run Site: https://cylabs-osint.github.io/CygniaCortex/
+Sample Run Site: https://cygnia-cortex-team.github.io/team-profile/
 Note: Social media profile integration is still in progress. The site is currently under development.
